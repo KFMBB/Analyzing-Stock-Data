@@ -91,7 +91,7 @@ Ensure you have the following installed:
 ### 🔎 Searching Algorithms
 - Implements **binary search** and **linear search** for retrieving stock data efficiently.
 
-### 📊 Graphical Data Representation (Future Scope)
+### 📊 Graphical Data Representation
 - Implementing visualization features using JavaFX or external libraries to graph trends.
 
 ## 🤝 Contributing
