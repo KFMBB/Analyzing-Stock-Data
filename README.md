@@ -1,72 +1,109 @@
-## Stock Market Data Analysis Project
-# Introduction
-This project explores the intersection of finance and data structures, applying programming skills to analyze historical stock market data. The goal is to gain practical experience by manipulating, analyzing, and deriving insights from real-world financial data.
+# Stock Market Data Analysis
 
-# Dataset Overview
-The dataset contains historical stock data for various companies, including key metrics such as the open, high, low, and close prices, as well as the trading volume for each day. Each company's stock history is stored in a separate CSV file, named according to the company's code.
+## 📌 Introduction
 
-# Sample Data
-For example, the stock data for Google (GOOGL) includes:
+This project focuses on analyzing stock market data using Java and data structures. It implements various algorithms to process, analyze, and extract insights from historical stock price data stored in CSV files. The project demonstrates key concepts of **file handling, data structures, and algorithm implementation** in Java.
 
-Date	Open	High	Low	Close	Volume
-2004-08-19	2.50	2.60	2.40	2.51	893181924
-2004-08-20	2.53	2.73	2.52	2.71	456686856
-2004-08-23	2.77	2.84	2.73	2.74	365122512
-2004-08-24	2.78	2.79	2.59	2.62	304946748
-These records provide essential data points for analyzing stock trends and performance.
+## 📊 Dataset Overview
 
-# Data Files
-The dataset is divided into two folders:
+The dataset consists of historical stock data for various companies, stored in CSV files. Each file contains:
 
-Real Data: Contains actual historical stock data.
-Example Data: Provides simplified data for debugging and testing code.
-# Terminology
-Understanding the following terms will help in analyzing the stock data effectively:
+- **Date**: The trading date.
+- **Open**: Opening price of the stock.
+- **High**: Highest price reached during the day.
+- **Low**: Lowest price reached during the day.
+- **Close**: Closing price of the stock.
+- **Volume**: Number of shares traded on that day.
 
--Data Point: A single piece of data recorded at a specific time, such as the open, high, low, close prices, or volume for a particular day.
+### Sample Data (Google - GOOGL)
 
--Time Series: A sequence of data points representing the same information over time, like daily closing prices of a stock.
+| Date       | Open | High | Low  | Close | Volume    |
+|------------|------|------|------|-------|-----------|
+| 2004-08-19 | 2.50 | 2.60 | 2.40 | 2.51  | 893181924 |
+| 2004-08-20 | 2.53 | 2.73 | 2.52 | 2.71  | 456686856 |
+| 2004-08-23 | 2.77 | 2.84 | 2.73 | 2.74  | 365122512 |
+| 2004-08-24 | 2.78 | 2.79 | 2.59 | 2.62  | 304946748 |
 
--Moving Average: A calculation used to smooth out price data by averaging subsets of the dataset over a specified period, helping to identify trends.
+## 🏗️ Project Structure
 
-Example: 3-Day Moving Average
-Given daily closing prices over five days:
+```
+Analyzing-Stock-Data/
+│── src/                    # Source code for data analysis
+│   │── Main.java            # Main entry point of the program
+│   │── FileManager.java     # Handles file reading and data extraction
+│   │── Stock.java           # Represents stock data with attributes
+│   │── StockAnalyzer.java   # Contains data analysis methods
+│   │── SortingAlgorithms.java # Implements sorting techniques (e.g., QuickSort, MergeSort)
+│── datasets/               # Folder containing stock data CSV files
+│── .idea/                  # Project configuration files (for IntelliJ IDEA)
+│── .gitignore              # Files to ignore in version control
+│── README.md               # Project documentation (this file)
+│── LICENSE                 # Project licensing information
+│── project.iml             # IntelliJ IDEA project module file
+```
 
-Day 1: $10
-Day 2: $12
-Day 3: $11
-Day 4: $13
-Day 5: $14
-The 3-day moving average is calculated as follows:
+## 🚀 Getting Started
 
-Days 1-3: (10 + 12 + 11) / 3 = $11
-Days 2-4: (12 + 11 + 13) / 3 = $12
-Days 3-5: (11 + 13 + 14) / 3 = $12.67
-Resulting in the following time series:
+### Prerequisites
 
-Day 3: $11
+Ensure you have the following installed:
+- **Java Development Kit (JDK 8 or higher)**
+- **An Integrated Development Environment (IDE) such as IntelliJ IDEA**
 
-Day 4: $12
+### Installation & Usage
 
-Day 5: $12.67
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/KFMBB/Analyzing-Stock-Data.git
+   ```
 
--Price Increase: The difference between the closing prices on two consecutive days. The Single Day Price Increase (SDPI) is the difference between the closing and opening prices on the same day.
+2. **Navigate to the project directory:**
+   ```bash
+   cd Analyzing-Stock-Data
+   ```
 
--Stock Performance: An evaluation of how a stock's price changes over time, often measured by the relative change in price.
+3. **Open the project in IntelliJ IDEA** (or any preferred Java IDE).
 
-Example: Stock Performance
-Given the closing prices:
+4. **Ensure all dependencies are set up correctly.**
 
-Day 1: $10
-Day 2: $12
-Day 3: $11
-Day 4: $13
-Day 5: $14
-The performance between Day 2 and Day 4 is calculated as:
+5. **Run the `Main.java` file** to start the analysis.
 
-Performance = 13-12/12 = 0.083 or 8.3%
+## 🛠️ Features & Functionality
 
+### 📂 File Handling
+- Reads and extracts stock data from CSV files using `FileManager.java`.
 
+### 📈 Stock Data Representation
+- The `Stock.java` class models stock attributes (date, open, close, high, low, volume) and provides structured data handling.
 
-# Getting Started
-Clone the repository and explore the provided data to start analyzing stock market trends and performance.
+### 📊 Stock Analysis
+- `StockAnalyzer.java` contains methods to calculate:
+  - Highest and lowest stock prices
+  - Average stock price over a period
+  - Stock price trends
+
+### 🔍 Sorting & Searching Algorithms
+- `SortingAlgorithms.java` implements various sorting methods for stock data:
+  - **QuickSort**: Efficient sorting for large datasets.
+  - **MergeSort**: Stable sorting method with predictable time complexity.
+  - **Bubble Sort (for small datasets)**: Demonstrates basic sorting concepts.
+
+### 🔎 Searching Algorithms
+- Implements **binary search** and **linear search** for retrieving stock data efficiently.
+
+### 📊 Graphical Data Representation (Future Scope)
+- Implementing visualization features using JavaFX or external libraries to graph trends.
+
+## 🤝 Contributing
+
+Contributions are welcome! If you'd like to contribute:
+- Fork the repository
+- Create a new branch (`git checkout -b feature-branch`)
+- Commit your changes (`git commit -m 'Added new feature'`)
+- Push to the branch (`git push origin feature-branch`)
+- Open a Pull Request
+
+## 🙌 Acknowledgments
+
+A special thanks to contributors and the open-source community for their continuous support!
+
